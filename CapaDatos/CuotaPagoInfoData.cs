@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
-using WebApi.Models;
+using System.Text;
+using System.Threading.Tasks;
+using CapaEntidades;
 
-namespace WebApi.Data
+namespace CapaDatos
 {
-    public class CuotaPagoInfoData
+   public class CuotaPagoInfoData
     {
         public static CuotaPagoInfo Obtener(int noRecibo)
         {
@@ -25,7 +26,7 @@ namespace WebApi.Data
                     {
                         while (reader.Read())
                         {
-                           oCuotaPago= new CuotaPagoInfo
+                            oCuotaPago = new CuotaPagoInfo
                             {
                                 NoRecibo = (int)reader["NoRecibo"],
                                 NoCuota = (int)reader["No Cuota"],
@@ -37,8 +38,8 @@ namespace WebApi.Data
                                 MontoPagado = (decimal)reader["Monto Pagado"],
                                 NoCaja = (int)reader["No Caja"],
                                 EstadoCuenta = (int)reader["Estado de Cuenta"]
-                           };
-                          
+                            };
+
                         }
                     }
                     return oCuotaPago;
@@ -50,6 +51,5 @@ namespace WebApi.Data
                 }
             }
         }
-
     }
 }

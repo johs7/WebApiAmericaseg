@@ -126,10 +126,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CuotaPagoController.cs" />
     <Compile Include="Controllers\ReciboController.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\CuotaPagoInfoData.cs" />
     <Compile Include="Data\InformacionReciboData.cs" />
+    <Compile Include="Function\CalcularDiasMora.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,7 +154,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CuotaPago\" />
     <Folder Include="Views\Recibo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{3678108f-e34c-4a7c-ab76-c1147918c612}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{279a5d83-ea75-4d26-862c-d4959538af8d}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

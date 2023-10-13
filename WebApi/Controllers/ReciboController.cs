@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Web.Http;
-using WebApi.Data;
-using WebApi.Models;
+using CapaEntidades;
+using CapaDatos;
 
 namespace WebApi.Controllers
 {
     public class ReciboController : ApiController
     {
-        private InformacionReciboData informacionReciboData;
-
+       
         public ReciboController()
         {
-            informacionReciboData = new InformacionReciboData();
+          
         }
 
         // GET api/recibo/5
