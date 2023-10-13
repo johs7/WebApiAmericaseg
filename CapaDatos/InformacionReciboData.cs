@@ -17,7 +17,7 @@ namespace CapaDatos
             using (SqlConnection connection = new SqlConnection(Conexion.conection))
             {
 
-                SqlCommand cmd = new SqlCommand("ObtenerInformacionRecibo", connection);
+                SqlCommand cmd = new SqlCommand("Sp_ObtenerInformacionRecibo", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NoRecibo", noRecibo);
                 try
