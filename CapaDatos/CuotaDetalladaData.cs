@@ -13,7 +13,7 @@ namespace CapaDatos
             InformacionReciboDetalle oDetallada = new InformacionReciboDetalle();
             using (SqlConnection connection = new SqlConnection(Conexion.conection))
             {
-                SqlCommand cmd = new SqlCommand("ObtenerInformacionReciboDetallada", connection);
+                SqlCommand cmd = new SqlCommand("Sp_ObtenerInformacionReciboDetallada", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NoRecibo", noRecibo);
                 try

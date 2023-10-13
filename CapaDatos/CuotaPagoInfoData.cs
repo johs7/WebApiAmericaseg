@@ -16,7 +16,7 @@ namespace CapaDatos
             CuotaPagoInfo oCuotaPago = new CuotaPagoInfo();
             using (SqlConnection connection = new SqlConnection(Conexion.conection))
             {
-                SqlCommand cmd = new SqlCommand("ListarCuotasYPagos", connection);
+                SqlCommand cmd = new SqlCommand("Sp_ListarCuotasYPagos", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NoRecibo", noRecibo);
                 try
