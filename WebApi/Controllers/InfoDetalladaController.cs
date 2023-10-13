@@ -5,18 +5,18 @@ using CapaDatos;
 
 namespace WebApi.Controllers
 {
-    public class CuotaPagoController : ApiController
+    public class InfoDetalladaController : ApiController
     {
-      
+
         [System.Web.Http.HttpGet]
-        [Route("api/CuotaPago/{NoRecibo}")]
+        [Route("api/InfoDetallada/{NoRecibo}")]
         public IHttpActionResult Get(int NoRecibo)
         {
-             CuotaPagoInfo informacionPago =  CuotaPagoInfoData.Obtener(NoRecibo);
+            InformacionReciboDetalle informacionRecibo = InformacionReciboDetalladaData.ObtenerInformacionReciboDetallada(NoRecibo);
 
-            if (informacionPago != null)
+            if (informacionRecibo != null)
             {
-                return Ok(informacionPago);
+                return Ok(informacionRecibo);
             }
             else
             {

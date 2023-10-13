@@ -22,5 +22,6 @@ namespace CapaEntidades
         public decimal Pendiente { get; set; }
         public int CantidadCuotasPendientes { get; set; }
         public string Vigencia { get; set; }
+
     }
 }
